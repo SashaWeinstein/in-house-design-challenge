@@ -1,0 +1,29 @@
+//Current questions: what font to use? And how to get bottom border bigger?
+button{
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-color: purple;
+  text-underline-offset: 0px;
+  text-decoration-width: 2px;
+  background-color: #40B4C4;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-family: Helvetica;
+  font-weight: bold
+}
+
+button:hover{
+  text-decoration: None;
+  border: 2px black solid;
+}
+
+button:active{
+  background-color: #102C34;
+  color: white;
+}
+
+button:disabled{
+  background-color: #c8c4c4;
+  color:white
+}
