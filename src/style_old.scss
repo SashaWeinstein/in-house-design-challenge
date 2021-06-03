@@ -1,0 +1,64 @@
+//Current questions: what font to use?
+@mixin level($button-color, $text-color, ) {
+  background-color: $button-color;
+  color: $text-color;
+}
+
+
+$button-font: Arial;
+$primary-color: #40B4C4;
+$primary-active-color: #102c34;
+
+$secondary-color: #e80c4c;
+$secondary-active-color: #780434;
+$secondary-hover-outline-color: #780434;
+
+button{
+  font-size: 16px;
+
+
+  //background-color: $primary-color;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-family: $button-font;
+  //font-family: $font;
+  //font-family: ;
+  font-weight: bold
+}
+
+button:hover{
+  text-decoration: None;
+  border: 2px black solid;
+}
+
+.login_button{
+  @include level($primary-color, black);
+  text-decoration: underline;
+  text-decoration-color: purple;
+  text-underline-offset: 0px;
+  text-decoration-width: 2px;
+}
+
+.login_button:active{
+  background-color: $primary-active-color;
+  color: white;
+}
+
+.create_button{
+  @include level($secondary-color, white)
+}
+.create_button:hover{
+  border-color: $secondary-hover-outline-color;
+}
+
+.create_button:active{
+  background-color: $secondary-active-color;
+
+}
+
+
+button:disabled{
+  background-color: #c8c4c4;
+  color:white
+}
