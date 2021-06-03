@@ -1,9 +1,13 @@
-//Current questions: what font to use?
 @mixin level($button-color, $text-color, ) {
   background-color: $button-color;
   color: $text-color;
 }
 
+@mixin disable(){
+  background-color: #c8c4c4;
+  color:white;
+  text-decoration: none;
+}
 
 $button-font: Arial;
 $primary-color: #40B4C4;
@@ -15,15 +19,10 @@ $secondary-hover-outline-color: #780434;
 
 button{
   font-size: 16px;
-
-
-  //background-color: $primary-color;
   padding: 12px 24px;
   border: none;
   border-radius: 5px;
   font-family: $button-font;
-  //font-family: $font;
-  //font-family: ;
   font-weight: bold
 }
 
@@ -57,8 +56,11 @@ button:hover{
 
 }
 
+.forgot_button{
+  color: purple;
+}
 
 button:disabled{
-  background-color: #c8c4c4;
-  color:white
+  @include disable()
 }
+
